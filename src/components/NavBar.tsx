@@ -13,9 +13,16 @@ const NavBar: React.FC = () => {
     <nav className="bg-white py-4 shadow-sm sticky top-0 z-50">
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="font-poppins font-bold text-2xl text-intellexa-blue">
-            Intellexa<span className="text-intellexa-pink">.</span>
-          </h1>
+          <a href="/" className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/39356db0-a1f9-46e0-a0f3-e5e15eaa9c13.png" 
+              alt="Intellexa Logo" 
+              className="h-10 w-auto"
+            />
+            <span className="font-poppins font-bold text-2xl text-intellexa-blue hidden sm:inline-block">
+              Intellexa<span className="text-intellexa-pink">.</span>
+            </span>
+          </a>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
