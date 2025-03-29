@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
               <div className="absolute -top-4 -left-4 bg-white p-3 rounded-lg shadow-lg z-20 animate-float animation-delay-500">
                 <div className="flex flex-col items-center">
                   <p className="text-intellexa-pink font-semibold">Complete Package</p>
-                  <p className="text-sm text-gray-600">All in One PDF</p>
+                  <p className="text-sm text-gray-600">All in One Pack</p>
                 </div>
               </div>
             </div>
