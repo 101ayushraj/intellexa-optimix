@@ -9,6 +9,7 @@ interface CTAButtonProps {
   icon?: React.ReactNode;
   animate?: boolean;
   type?: 'primary' | 'secondary' | 'cta';
+  disabled?: boolean;
 }
 
 const CTAButton: React.FC<CTAButtonProps> = ({ 
@@ -17,7 +18,8 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   className = '',
   icon,
   animate = true,
-  type = 'cta'
+  type = 'cta',
+  disabled = false
 }) => {
   const buttonClass = {
     primary: 'btn-primary',
@@ -28,9 +30,11 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   return (
     <button 
       onClick={onClick} 
+      disabled={disabled}
       className={cn(
         buttonClass,
         animate && 'animate-pulse-subtle',
+        disabled && 'opacity-70 cursor-not-allowed',
         className
       )}
     >
