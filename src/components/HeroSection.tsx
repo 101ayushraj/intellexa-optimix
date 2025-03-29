@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
                 <div className="bg-green-100 p-1 rounded-full mr-2">
                   <Check className="h-4 w-4 text-green-600" />
                 </div>
-                10,000+ Students Helped
+                1000+ Students Helped
               </div>
               <div className="flex items-center text-sm text-gray-700">
                 <div className="bg-green-100 p-1 rounded-full mr-2">
