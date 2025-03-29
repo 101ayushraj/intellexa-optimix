@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,36 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-intellexa-blue hover:bg-intellexa-purple text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-intellexa-purple border border-intellexa-purple font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:bg-intellexa-light;
+  }
+  
+  .btn-cta {
+    @apply bg-intellexa-pink hover:bg-intellexa-violet text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-intellexa-dark mb-6 font-poppins;
+  }
+  
+  .section-subheading {
+    @apply text-xl text-gray-600 mb-8 max-w-3xl mx-auto;
   }
 }
