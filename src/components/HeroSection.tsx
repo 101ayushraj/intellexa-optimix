@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-intellexa-dark leading-tight">
-              Crack JEE & NEET with the 
+              Crack JEE with the 
               <span className="text-intellexa-blue"> Ultimate Study Pack</span>
             </h1>
             
@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
                 <div className="bg-green-100 p-1 rounded-full mr-2">
                   <Check className="h-4 w-4 text-green-600" />
                 </div>
-                100% JEE/NEET Syllabus
+                100% JEE Syllabus
               </div>
             </div>
             
@@ -71,27 +71,11 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Indian students preparing for exams" 
-                className="rounded-lg shadow-2xl z-10 relative max-w-md"
-              />
-              
-              <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-lg z-20 animate-float">
-                <div className="flex flex-col items-center">
-                  <p className="text-intellexa-blue font-semibold">Instant Delivery</p>
-                  <p className="text-sm text-gray-600">Get via WhatsApp & Email</p>
-                </div>
-              </div>
-              
-              <div className="absolute -top-4 -left-4 bg-white p-3 rounded-lg shadow-lg z-20 animate-float animation-delay-500">
-                <div className="flex flex-col items-center">
-                  <p className="text-intellexa-pink font-semibold">Complete Package</p>
-                  <p className="text-sm text-gray-600">All in One Pack</p>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+              alt="Student studying with JEE materials" 
+              className="rounded-lg shadow-2xl z-10 relative w-full max-w-md object-cover"
+            />
           </div>
         </div>
       </div>

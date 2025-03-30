@@ -10,6 +10,7 @@ import PricingSection from '@/components/PricingSection';
 import UpcomingPacksSection from '@/components/UpcomingPacksSection';
 import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
+import PrivacyPolicyModal from '@/components/PrivacyPolicyModal';
 import { ArrowUp } from 'lucide-react';
 
 const Index = () => {
@@ -38,7 +39,7 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <h2 className="text-2xl font-bold">Intellexa<span className="text-intellexa-pink">.</span></h2>
-              <p className="text-gray-400 mt-1">Your path to JEE & NEET success</p>
+              <p className="text-gray-400 mt-1">Your path to JEE success</p>
             </div>
             
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
@@ -47,6 +48,13 @@ const Index = () => {
               <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
               <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+              <PrivacyPolicyModal 
+                trigger={
+                  <button className="text-gray-300 hover:text-white transition-colors">
+                    Privacy Policy
+                  </button>
+                } 
+              />
             </div>
           </div>
           
