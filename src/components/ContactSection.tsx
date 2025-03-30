@@ -24,7 +24,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-intellexa-dark">WhatsApp Support</p>
-                  <p className="text-gray-600">+91 98765 43210</p>
+                  <p className="text-gray-600">+916203347060</p>
                   <p className="text-sm text-gray-500 mt-1">Quick responses within 2 hours</p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-intellexa-dark">Email Support</p>
-                  <p className="text-gray-600">support@intellexa.com</p>
+                  <p className="text-gray-600">intellexa.shop@gmail.com</p>
                   <p className="text-sm text-gray-500 mt-1">We reply within 24 hours</p>
                 </div>
               </div>
@@ -64,7 +64,6 @@ const ContactSection: React.FC = () => {
                 <div>
                   <p className="font-semibold text-intellexa-dark">Working Hours</p>
                   <p className="text-gray-600">Monday to Saturday: 9AM - 8PM IST</p>
-                  <p className="text-gray-600">Sunday: 10AM - 4PM IST</p>
                 </div>
               </div>
             </div>

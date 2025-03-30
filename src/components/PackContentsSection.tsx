@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { FileText, BookOpen, CheckCircle, BookCheck, BrainCircuit, FileCheck, Send } from 'lucide-react';
+import { FileText, BookOpen, CheckCircle, BookCheck, BrainCircuit, FileCheck, Send, CalendarCheck, Zap, List } from 'lucide-react';
 
 const PackContentsSection: React.FC = () => {
   const contents = [
@@ -30,6 +30,21 @@ const PackContentsSection: React.FC = () => {
       icon: <BrainCircuit className="h-12 w-12 p-2 bg-orange-100 text-orange-500 rounded-lg" />,
     },
     {
+      title: "Cheat Sheets",
+      description: "Compact, high-density information sheets for last-minute revision.",
+      icon: <List className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
+    },
+    {
+      title: "Study Planner",
+      description: "Customizable study schedules to optimize your preparation time.",
+      icon: <CalendarCheck className="h-12 w-12 p-2 bg-indigo-100 text-indigo-500 rounded-lg" />,
+    },
+    {
+      title: "Crash Course Content",
+      description: "Intensive, focused material for rapid learning and last-minute preparation.",
+      icon: <Zap className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
+    },
+    {
       title: "Test Series with Solutions",
       description: "Practice tests that simulate real exam conditions with detailed solution explanations.",
       icon: <BookCheck className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
@@ -47,7 +62,7 @@ const PackContentsSection: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="section-heading">What's Inside the Intellexa Study Pack?</h2>
           <p className="section-subheading">
-            Our comprehensive pack contains everything you need to excel in your JEE & NEET preparation.
+            Our comprehensive pack contains everything you need to excel in your JEE preparation.
           </p>
         </div>
         
@@ -71,7 +86,7 @@ const PackContentsSection: React.FC = () => {
               <CheckCircle className="h-6 w-6 mr-2" /> Everything You Need in One Place
             </h3>
             <p className="text-gray-700">
-              No need to search elsewhere or buy multiple resources. Intellexa Study Pack is designed to be your one-stop solution for JEE & NEET preparation. All materials are meticulously organized and structured for maximum learning efficiency.
+              No need to search elsewhere or buy multiple resources. Intellexa Study Pack is designed to be your one-stop solution for JEE preparation. All materials are meticulously organized and structured for maximum learning efficiency.
             </p>
           </div>
         </div>

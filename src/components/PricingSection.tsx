@@ -26,6 +26,9 @@ const PricingSection: React.FC = () => {
     "Detailed Notes & Short Notes",
     "Formula Notebook",
     "Mind Maps",
+    "Cheat Sheets",
+    "Study Planner",
+    "Crash Course Content",
     "Test Series with Solutions",
     "Instant Digital Delivery"
   ];
@@ -49,8 +52,8 @@ const PricingSection: React.FC = () => {
                   <span className="font-medium text-sm">Limited-Time Offer – 50% OFF!</span>
                 </div>
                 
-                <h3 className="text-2xl md:text-3xl font-bold text-intellexa-dark mb-2">Complete JEE & NEET Study Pack</h3>
-                <p className="text-gray-600 mb-6">Everything you need to ace your exams in one comprehensive package</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-intellexa-dark mb-2">Complete JEE Study Pack</h3>
+                <p className="text-gray-600 mb-6">Everything you need to ace your JEE exam in one comprehensive package</p>
                 
                 <div className="flex items-center mb-8">
                   <p className="text-gray-400 line-through text-2xl">₹1599</p>

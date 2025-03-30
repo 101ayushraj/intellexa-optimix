@@ -72,8 +72,8 @@ const HeroSection: React.FC = () => {
           
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
             <img 
-              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-              alt="Student studying with JEE materials" 
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+              alt="Student with JEE study materials" 
               className="rounded-lg shadow-2xl z-10 relative w-full max-w-md object-cover"
             />
           </div>
