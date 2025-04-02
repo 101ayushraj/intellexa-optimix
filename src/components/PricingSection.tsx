@@ -1,23 +1,11 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import CTAButton from './CTAButton';
 import { Check, Clock, AlertCircle } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
 
 const PricingSection: React.FC = () => {
-  const { toast } = useToast();
-  const [loading, setLoading] = useState(false);
-  
   const handlePurchase = () => {
-    setLoading(true);
-    // Simulate payment gateway redirect
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Success!",
-        description: "This is a demo. In a real implementation, you would be redirected to a payment gateway.",
-      });
-    }, 1500);
+    window.open('https://rzp.io/rzp/zwm6NRUQ', '_blank');
   };
 
   const benefits = [
@@ -73,10 +61,9 @@ const PricingSection: React.FC = () => {
                 </div>
                 
                 <CTAButton 
-                  text={loading ? "Processing..." : "Buy Now @ ₹799"} 
+                  text="Buy Now @ ₹799" 
                   onClick={handlePurchase}
                   className="w-full justify-center"
-                  disabled={loading}
                 />
                 
                 <div className="mt-4 flex items-start text-sm text-gray-500">

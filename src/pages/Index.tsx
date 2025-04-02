@@ -12,6 +12,7 @@ import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import PrivacyPolicyModal from '@/components/PrivacyPolicyModal';
 import { ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const scrollToTop = () => {
@@ -47,7 +48,8 @@ const Index = () => {
               <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
               <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
-              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+              <Link to="/refund-policy" className="text-gray-300 hover:text-white transition-colors">Refund Policy</Link>
               <PrivacyPolicyModal 
                 trigger={
                   <button className="text-gray-300 hover:text-white transition-colors">
