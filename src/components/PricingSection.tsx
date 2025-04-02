@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CTAButton from './CTAButton';
 import { Check, Clock, AlertCircle } from 'lucide-react';
@@ -74,7 +75,7 @@ const PricingSection: React.FC = () => {
                 
                 <div className="mt-4 flex items-start text-sm text-gray-500">
                   <AlertCircle className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <p>After purchase, you'll receive your study pack instantly via WhatsApp & Email.</p>
+                  <p>After payment, you'll be redirected to our thank you page and receive your study pack instantly via WhatsApp & Email.</p>
                 </div>
               </div>
               

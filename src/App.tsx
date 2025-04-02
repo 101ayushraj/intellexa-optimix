@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import ContactPage from "./pages/ContactPage";
 import RefundPolicyPage from "./pages/RefundPolicyPage";
 import ThankYouPage from "./pages/ThankYouPage";
+import SuccessPage from "./pages/SuccessPage";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App: React.FC = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/refund-policy" element={<RefundPolicyPage />} />
             <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/success" element={<SuccessPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
