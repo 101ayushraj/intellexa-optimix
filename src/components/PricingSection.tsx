@@ -5,7 +5,7 @@ import { Check, Clock, AlertCircle } from 'lucide-react';
 
 const PricingSection: React.FC = () => {
   const handlePurchase = () => {
-    window.open('https://rzp.io/rzp/zwm6NRUQ', '_blank');
+    window.open('https://rzp.io/rzp/L5V7LvwQ', '_blank');
   };
 
   const benefits = [
