@@ -1,11 +1,17 @@
-
 import React from 'react';
 import CTAButton from './CTAButton';
 import { Check, Clock, AlertCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const PricingSection: React.FC = () => {
+  const navigate = useNavigate();
+
   const handlePurchase = () => {
-    window.open('https://rzp.io/rzp/L5V7LvwQ', '_blank');
+    // Option 1: Open in the same tab (recommended for Razorpay integration)
+    window.location.href = 'https://rzp.io/rzp/L5V7LvwQ';
+    
+    // Option 2: If you want to keep the original behavior of opening in a new tab
+    // window.open('https://rzp.io/rzp/L5V7LvwQ', '_blank');
   };
 
   const benefits = [
