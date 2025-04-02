@@ -8,10 +8,10 @@ const PricingSection: React.FC = () => {
 
   const handlePurchase = () => {
     // Option 1: Open in the same tab (recommended for Razorpay integration)
-    window.location.href = 'https://rzp.io/rzp/L5V7LvwQ';
+    window.location.href = 'https://rzp.io/rzp/XVTAEqif';
     
     // Option 2: If you want to keep the original behavior of opening in a new tab
-    // window.open('https://rzp.io/rzp/L5V7LvwQ', '_blank');
+    // window.open('https://rzp.io/rzp/XVTAEqif', '_blank');
   };
 
   const benefits = [
