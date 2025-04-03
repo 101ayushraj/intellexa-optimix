@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 import { Check, Mail } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 const SuccessPage: React.FC = () => {
   const navigate = useNavigate();
