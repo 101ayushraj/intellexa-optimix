@@ -27,9 +27,15 @@ const App: React.FC = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/refund-policy" element={<RefundPolicyPage />} />
             <Route path="/thank-you" element={<ThankYouPage />} />
+            
+            {/* Make success route more robust with variations */}
             <Route path="/success" element={<SuccessPage />} />
+            <Route path="/success/" element={<SuccessPage />} />
+            <Route path="/success.html" element={<SuccessPage />} />
+            
             {/* Handle any potential direct navigation to index.html */}
             <Route path="/index.html" element={<Navigate to="/" replace />} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

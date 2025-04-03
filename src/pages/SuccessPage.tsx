@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
-import { Check, Mail } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
@@ -13,13 +13,22 @@ const SuccessPage: React.FC = () => {
     // Show toast notification when the page loads
     toast.success("Payment successful! Your study pack is on the way.");
     
+    // Log success for debugging
+    console.log("Success page loaded, will redirect to thank-you page in 2 seconds");
+    
     // Redirect to thank-you page after 2 seconds
     const timer = setTimeout(() => {
+      console.log("Redirecting to thank-you page now");
       navigate('/thank-you');
     }, 2000);
     
     return () => clearTimeout(timer);
   }, [navigate]);
+
+  // Handle manual navigation if automatic redirect fails
+  const handleManualRedirect = () => {
+    navigate('/thank-you');
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -45,11 +54,12 @@ const SuccessPage: React.FC = () => {
                 </p>
               </div>
               
-              <Link to="/thank-you">
-                <Button className="w-full bg-intellexa-blue hover:bg-intellexa-blue/90">
-                  Continue to Thank You Page
-                </Button>
-              </Link>
+              <Button 
+                onClick={handleManualRedirect}
+                className="w-full bg-intellexa-blue hover:bg-intellexa-blue/90"
+              >
+                Continue to Thank You Page
+              </Button>
             </div>
           </div>
         </div>
