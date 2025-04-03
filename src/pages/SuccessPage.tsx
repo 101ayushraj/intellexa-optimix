@@ -11,23 +11,23 @@ const SuccessPage: React.FC = () => {
 
   useEffect(() => {
     // Show toast notification when the page loads
-    toast.success("Payment successful! Your study pack is on the way.");
+    toast.success("Payment successful! Redirecting to home page...");
     
     // Log success for debugging
-    console.log("Success page loaded, will redirect to home page in 3 seconds");
+    console.log("Success page loaded, will redirect to home page in 1 second");
     
-    // Redirect to home page after 3 seconds (slightly longer to ensure toast is visible)
+    // Redirect to home page after 1 second (quickly to avoid refresh issues)
     const timer = setTimeout(() => {
       console.log("Redirecting to home page now");
-      navigate('/');
-    }, 3000);
+      navigate('/', { replace: true });
+    }, 1000);
     
     return () => clearTimeout(timer);
   }, [navigate]);
 
   // Handle manual navigation if automatic redirect fails
   const handleManualRedirect = () => {
-    navigate('/');
+    navigate('/', { replace: true });
   };
 
   return (
