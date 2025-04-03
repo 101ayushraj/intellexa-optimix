@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
 import { Check } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 
@@ -14,20 +14,20 @@ const SuccessPage: React.FC = () => {
     toast.success("Payment successful! Your study pack is on the way.");
     
     // Log success for debugging
-    console.log("Success page loaded, will redirect to thank-you page in 2 seconds");
+    console.log("Success page loaded, will redirect to home page in 3 seconds");
     
-    // Redirect to thank-you page after 2 seconds
+    // Redirect to home page after 3 seconds (slightly longer to ensure toast is visible)
     const timer = setTimeout(() => {
-      console.log("Redirecting to thank-you page now");
-      navigate('/thank-you');
-    }, 2000);
+      console.log("Redirecting to home page now");
+      navigate('/');
+    }, 3000);
     
     return () => clearTimeout(timer);
   }, [navigate]);
 
   // Handle manual navigation if automatic redirect fails
   const handleManualRedirect = () => {
-    navigate('/thank-you');
+    navigate('/');
   };
 
   return (
@@ -50,7 +50,7 @@ const SuccessPage: React.FC = () => {
               
               <div className="bg-intellexa-light p-4 rounded-lg mb-6">
                 <p className="text-intellexa-blue font-medium">
-                  Redirecting you to the thank you page...
+                  Redirecting you to the home page...
                 </p>
               </div>
               
@@ -58,7 +58,7 @@ const SuccessPage: React.FC = () => {
                 onClick={handleManualRedirect}
                 className="w-full bg-intellexa-blue hover:bg-intellexa-blue/90"
               >
-                Continue to Thank You Page
+                Continue to Home Page
               </Button>
             </div>
           </div>

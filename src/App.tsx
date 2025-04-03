@@ -9,7 +9,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import ContactPage from "./pages/ContactPage";
 import RefundPolicyPage from "./pages/RefundPolicyPage";
-import ThankYouPage from "./pages/ThankYouPage";
 import SuccessPage from "./pages/SuccessPage";
 
 // Create a new QueryClient instance
@@ -26,7 +25,6 @@ const App: React.FC = () => {
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/refund-policy" element={<RefundPolicyPage />} />
-            <Route path="/thank-you" element={<ThankYouPage />} />
             
             {/* Make success route more robust with variations */}
             <Route path="/success" element={<SuccessPage />} />

@@ -35,7 +35,7 @@ const NotFound = () => {
               
               <div className="bg-intellexa-light p-4 rounded-lg mb-6">
                 <p className="text-intellexa-blue font-medium">
-                  Try refreshing or going back to the home page
+                  Please try going back to the home page
                 </p>
               </div>
               
