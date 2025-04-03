@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import ContactPage from "./pages/ContactPage";
 import RefundPolicyPage from "./pages/RefundPolicyPage";
 import SuccessPage from "./pages/SuccessPage";
+import Redirect from "./components/Redirect";
 
 // Create a new QueryClient instance
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Redirect />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<ContactPage />} />

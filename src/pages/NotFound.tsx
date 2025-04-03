@@ -1,19 +1,27 @@
 
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import NavBar from '@/components/NavBar';
 import { Button } from '@/components/ui/button';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Home } from 'lucide-react';
 
 const NotFound = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:",
       location.pathname
     );
-  }, [location.pathname]);
+    
+    // Automatically redirect to home page after 5 seconds
+    const timer = setTimeout(() => {
+      navigate('/');
+    }, 5000);
+    
+    return () => clearTimeout(timer);
+  }, [location.pathname, navigate]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -35,13 +43,14 @@ const NotFound = () => {
               
               <div className="bg-intellexa-light p-4 rounded-lg mb-6">
                 <p className="text-intellexa-blue font-medium">
-                  Please try going back to the home page
+                  Redirecting to home page in 5 seconds...
                 </p>
               </div>
               
               <Link to="/">
                 <Button className="w-full bg-intellexa-blue hover:bg-intellexa-blue/90">
-                  Go Back to Home
+                  <Home className="mr-2 h-4 w-4" />
+                  Go to Home Page
                 </Button>
               </Link>
             </div>
