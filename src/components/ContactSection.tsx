@@ -24,7 +24,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-intellexa-dark">WhatsApp Support</p>
-                  <p className="text-gray-600">+916203347060</p>
+                  <p className="text-gray-600">+916203346070</p>
                   <p className="text-sm text-gray-500 mt-1">Quick responses within 2 hours</p>
                 </div>
               </div>

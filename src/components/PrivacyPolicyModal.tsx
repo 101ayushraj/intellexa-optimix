@@ -128,7 +128,7 @@ const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ trigger }) => {
             <p className="mt-1">If you have any questions regarding this Privacy Policy, please contact us at:</p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
               <li><strong>Email:</strong> <a href="mailto:intellexa.shop@gmail.com" className="text-intellexa-blue hover:underline">intellexa.shop@gmail.com</a></li>
-              <li><strong>Phone:</strong> +916203347060</li>
+              <li><strong>Phone:</strong> +916203346070</li>
             </ul>
           </div>
           

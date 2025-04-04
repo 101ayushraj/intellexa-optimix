@@ -56,8 +56,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-intellexa-dark mb-1">Phone</h3>
-                    <a href="tel:+916203347060" className="text-intellexa-blue hover:underline">
-                      +91 6203347060
+                    <a href="tel:+916203346070" className="text-intellexa-blue hover:underline">
+                      +91 6203346070
                     </a>
                     <p className="text-gray-500 text-sm mt-1">
                       Available Monday to Saturday during business hours.
