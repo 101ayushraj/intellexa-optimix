@@ -45,11 +45,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
       )}
       
       <Card 
-        className={`overflow-hidden h-full transition-all duration-300 ${
-          isPopular 
-            ? 'border-intellexa-blue shadow-lg scale-105 md:scale-105 z-10' 
-            : 'border hover:border-intellexa-blue/70 hover:shadow-lg'
-        } hover:transform hover:scale-[1.05] hover:shadow-xl`}
+        className="overflow-hidden h-full transition-all duration-300 
+          border hover:border-intellexa-blue/70 hover:shadow-lg
+          hover:transform hover:scale-[1.05] hover:shadow-xl"
       >
         <CardHeader className={`${isPopular ? 'bg-intellexa-light' : ''}`}>
           <div className="flex items-center justify-between">
@@ -96,13 +94,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <CTAButton 
             text={`Buy Now @ ₹${price}`}
             onClick={() => onPurchase(price)}
-            className={`w-full justify-center ${
-              isPopular 
-                ? 'animate-pulse-subtle' 
-                : 'bg-white border border-intellexa-blue text-intellexa-blue hover:bg-intellexa-light'
-            }`}
-            type={isPopular ? 'cta' : 'secondary'}
-            animate={isPopular}
+            className="w-full justify-center bg-intellexa-pink hover:bg-intellexa-violet text-white"
+            type="cta"
+            animate={true}
           />
         </CardFooter>
       </Card>

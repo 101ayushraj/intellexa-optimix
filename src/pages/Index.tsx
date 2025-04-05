@@ -64,7 +64,7 @@ const Index = () => {
           
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Intellexa. All rights reserved.
+              © 2021 Intellexa. All rights reserved.
             </p>
             
             <div className="mt-4 md:mt-0 flex space-x-4">
