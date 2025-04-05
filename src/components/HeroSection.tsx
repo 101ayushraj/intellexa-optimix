@@ -96,12 +96,12 @@ const HeroSection: React.FC = () => {
             
             <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className="flex flex-col">
-                <p className="text-gray-500 line-through text-xl">₹1599</p>
-                <p className="text-3xl font-bold text-intellexa-dark">₹799 <span className="text-green-600 text-lg font-medium">only</span></p>
+                <p className="text-gray-500 line-through text-xl">₹999</p>
+                <p className="text-3xl font-bold text-intellexa-dark">₹497 <span className="text-green-600 text-lg font-medium">only</span></p>
               </div>
               
               <CTAButton 
-                text="Buy Now @ ₹799" 
+                text="Buy Now @ ₹497" 
                 onClick={scrollToPayment}
                 icon={<ArrowRight className="h-5 w-5" />}
               />
