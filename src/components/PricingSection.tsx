@@ -1,95 +1,179 @@
 
 import React from 'react';
 import CTAButton from './CTAButton';
-import { Check, Clock, AlertCircle } from 'lucide-react';
+import { Check, Clock, AlertCircle, Badge, Crown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge as UIBadge } from '@/components/ui/badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 
 const PricingSection: React.FC = () => {
   const navigate = useNavigate();
 
-  const handlePurchase = () => {
-    // Option 1: Open in the same tab (recommended for Razorpay integration)
-    window.location.href = 'https://rzp.io/rzp/XVTAEqif';
+  const handlePurchase = (price: string) => {
+    // Use different links based on the selected plan
+    const links: Record<string, string> = {
+      '497': 'https://rzp.io/rzp/XVTAEqif', // Replace with actual link for Basic
+      '797': 'https://rzp.io/rzp/XVTAEqif', // Current link for Standard
+      '997': 'https://rzp.io/rzp/XVTAEqif', // Replace with actual link for Premium
+    };
     
-    // Option 2: If you want to keep the original behavior of opening in a new tab
-    // window.open('https://rzp.io/rzp/XVTAEqif', '_blank');
+    window.location.href = links[price];
   };
 
-  const benefits = [
-    "Full Syllabus Tracker",
-    "PYQs with Solutions (Topic-wise & Year-wise)",
-    "Detailed Notes & Short Notes",
-    "Formula Notebook",
-    "Mind Maps",
-    "Cheat Sheets",
+  // Common benefits across all plans
+  const commonBenefits = [
+    "Instant Digital Delivery",
+    "Access on any device",
     "Study Planner",
-    "Crash Course Content",
-    "Test Series with Solutions",
-    "Instant Digital Delivery"
+  ];
+
+  // Define the plans and their features
+  const plans = [
+    {
+      id: 'basic',
+      name: 'Basic Pack',
+      description: 'Essential materials for JEE preparation',
+      originalPrice: '997',
+      price: '497',
+      features: [
+        "Syllabus Tracker",
+        "PYQs without solution",
+        "PYQs with solutions",
+        "Short Notes",
+        "Cheat Sheets",
+        "Formula CUM Revision Sheets",
+      ],
+      isPopular: false,
+      icon: <Badge className="h-5 w-5" />
+    },
+    {
+      id: 'standard',
+      name: 'Standard Pack',
+      description: 'Comprehensive preparation materials',
+      originalPrice: '1599',
+      price: '797',
+      features: [
+        "Everything in Basic Pack",
+        "Chapterwise PYQs with solutions",
+        "DPPs",
+        "Mindmaps",
+        "Detailed Notes",
+        "Test Series",
+      ],
+      isPopular: true,
+      icon: <Check className="h-5 w-5" />
+    },
+    {
+      id: 'premium',
+      name: 'Premium Pack',
+      description: 'Complete preparation for JEE & Advanced',
+      originalPrice: '1999',
+      price: '997',
+      features: [
+        "Everything in Standard Pack",
+        "ADV PYQs with solutions",
+        "ADV PYQs without solutions",
+        "Crash Course",
+        "Popular Books",
+      ],
+      isPopular: false,
+      icon: <Crown className="h-5 w-5" />
+    }
   ];
 
   return (
     <section id="pricing" className="py-20 bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="section-heading">Limited-Time Offer</h2>
+          <h2 className="section-heading">Choose Your JEE Study Pack</h2>
           <p className="section-subheading">
-            Invest in your success today – Get the complete Intellexa Study Pack at a special price!
+            Select the package that best fits your preparation needs and goals.
           </p>
         </div>
         
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-gradient-to-r from-intellexa-blue to-intellexa-violet rounded-2xl overflow-hidden shadow-xl">
-            <div className="bg-white m-1 rounded-xl overflow-hidden">
-              <div className="p-8">
-                <div className="bg-red-100 text-red-700 px-4 py-2 rounded-full inline-flex items-center mb-6">
-                  <Clock className="h-4 w-4 mr-1" /> 
-                  <span className="font-medium text-sm">Limited-Time Offer – 50% OFF!</span>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {plans.map((plan) => (
+            <div key={plan.id} className="relative">
+              {plan.isPopular && (
+                <div className="absolute -top-4 inset-x-0 flex justify-center">
+                  <UIBadge className="bg-intellexa-pink text-white px-3 py-1 text-sm font-semibold">
+                    Most Popular
+                  </UIBadge>
                 </div>
-                
-                <h3 className="text-2xl md:text-3xl font-bold text-intellexa-dark mb-2">Complete JEE Study Pack</h3>
-                <p className="text-gray-600 mb-6">Everything you need to ace your JEE exam in one comprehensive package</p>
-                
-                <div className="flex items-center mb-8">
-                  <p className="text-gray-400 line-through text-2xl">₹1599</p>
-                  <p className="text-3xl md:text-4xl font-bold text-intellexa-dark ml-3">₹799</p>
-                  <span className="ml-2 bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">SAVE 50%</span>
-                </div>
-                
-                <div className="space-y-3 mb-8">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center">
-                      <div className="bg-green-100 p-1 rounded-full mr-3">
-                        <Check className="h-4 w-4 text-green-600" />
-                      </div>
-                      <p className="text-gray-700">{benefit}</p>
-                    </div>
-                  ))}
-                </div>
-                
-                <CTAButton 
-                  text="Buy Now @ ₹799" 
-                  onClick={handlePurchase}
-                  className="w-full justify-center"
-                />
-                
-                <div className="mt-4 flex items-start text-sm text-gray-500">
-                  <AlertCircle className="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" />
-                  <p>After payment, you'll be redirected to our thank you page and receive your study pack instantly via WhatsApp & Email.</p>
-                </div>
-              </div>
+              )}
               
-              <div className="bg-intellexa-light p-4 text-center">
-                <p className="text-intellexa-blue font-medium">Only 20 packs left at this price!</p>
-              </div>
+              <Card className={`overflow-hidden h-full transition-all ${
+                plan.isPopular 
+                  ? 'border-intellexa-blue shadow-lg scale-105 md:scale-105 z-10' 
+                  : 'border hover:border-intellexa-blue/50 hover:shadow-md'
+              }`}>
+                <CardHeader className={`${plan.isPopular ? 'bg-intellexa-light' : ''}`}>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <CardTitle className="text-2xl font-bold text-intellexa-dark flex items-center gap-2">
+                        <span className={`p-1.5 rounded-full ${plan.isPopular ? 'bg-intellexa-blue text-white' : 'bg-intellexa-light'}`}>
+                          {plan.icon}
+                        </span>
+                        {plan.name}
+                      </CardTitle>
+                      <CardDescription className="mt-2">{plan.description}</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                
+                <CardContent className="pt-6">
+                  <div className="flex items-center mb-6">
+                    <p className="text-gray-400 line-through text-lg">₹{plan.originalPrice}</p>
+                    <p className="text-3xl md:text-4xl font-bold text-intellexa-dark ml-3">₹{plan.price}</p>
+                    <span className="ml-2 bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded">
+                      SAVE {Math.round((1 - parseInt(plan.price) / parseInt(plan.originalPrice)) * 100)}%
+                    </span>
+                  </div>
+                  
+                  <div className="space-y-3 mb-8">
+                    {plan.features.map((feature, index) => (
+                      <div key={index} className="flex items-center">
+                        <div className="bg-green-100 p-1 rounded-full mr-3">
+                          <Check className="h-4 w-4 text-green-600" />
+                        </div>
+                        <p className="text-gray-700">{feature}</p>
+                      </div>
+                    ))}
+                    {commonBenefits.map((benefit, index) => (
+                      <div key={`common-${index}`} className="flex items-center">
+                        <div className="bg-green-100 p-1 rounded-full mr-3">
+                          <Check className="h-4 w-4 text-green-600" />
+                        </div>
+                        <p className="text-gray-700">{benefit}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+                
+                <CardFooter className="flex-col pt-0">
+                  <CTAButton 
+                    text={`Buy Now @ ₹${plan.price}`}
+                    onClick={() => handlePurchase(plan.price)}
+                    className={`w-full justify-center ${plan.isPopular ? '' : 'bg-white border border-intellexa-blue text-intellexa-blue hover:bg-intellexa-light'}`}
+                    type={plan.isPopular ? 'cta' : 'secondary'}
+                  />
+                </CardFooter>
+              </Card>
             </div>
-          </div>
-          
-          <div className="mt-8 bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-            <div className="flex items-center">
-              <AlertCircle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
+          ))}
+        </div>
+        
+        <div className="mt-12 bg-yellow-50 border border-yellow-200 p-6 rounded-lg max-w-3xl mx-auto">
+          <div className="flex items-start">
+            <AlertCircle className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0 mt-1" />
+            <div>
+              <p className="font-semibold text-gray-800 mb-2">100% Satisfaction Guarantee</p>
               <p className="text-gray-700">
-                <span className="font-semibold">100% Satisfaction Guarantee:</span> If you're not satisfied with the quality of our study materials, contact us within 7 days of purchase for a full refund.
+                If you're not satisfied with the quality of our study materials, contact us within 7 days of purchase for a full refund.
+              </p>
+              <p className="mt-2 text-gray-600">
+                <span className="font-medium">WhatsApp Support:</span> +916203346070
               </p>
             </div>
           </div>
