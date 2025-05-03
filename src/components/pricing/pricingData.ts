@@ -10,14 +10,12 @@ export const basicFeatures = [
 ];
 
 export const standardFeatures = [
-  "Everything in Basic",
   "500+ questions per chapter per subject",
   "DPPs",
   "Detailed notes",
 ];
 
 export const premiumFeatures = [
-  "Everything in Standard",
   "40-day crash course",
   "Mentorship by NITians/IITians",
   "Test series",
