@@ -31,7 +31,7 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="font-semibold text-intellexa-dark mb-1">Business Address</h3>
                     <p className="text-gray-600">Intellexa</p>
-                    <p className="text-gray-600">Patna, Bihar - 800001</p>
+                    <p className="text-gray-600">Patna, Bihar</p>
                   </div>
                 </div>
                 
