@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Badge, Crown, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +25,7 @@ const PricingSection: React.FC = () => {
       name: 'Basic Pack',
       description: 'Essential materials for JEE preparation',
       originalPrice: '999',
-      price: '497',
+      price: '499',
       discount: '50%',
       features: [...basicFeatures],
       unavailableFeatures: [...standardFeatures, ...premiumFeatures],
@@ -50,7 +49,7 @@ const PricingSection: React.FC = () => {
       name: 'Premium Pack',
       description: 'Complete preparation for JEE & Advanced',
       originalPrice: '2599',
-      price: '997',
+      price: '999',
       discount: '62%',
       features: [...basicFeatures, ...standardFeatures, ...premiumFeatures],
       unavailableFeatures: [],

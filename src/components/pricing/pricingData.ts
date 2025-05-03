@@ -29,7 +29,7 @@ export const commonBenefits = [
 
 // Payment links
 export const paymentLinks: Record<string, string> = {
-  '497': 'https://rzp.io/rzp/XVTAEqif', // Replace with actual link for Basic
-  '797': 'https://rzp.io/rzp/XVTAEqif', // Current link for Standard
-  '997': 'https://rzp.io/rzp/XVTAEqif', // Replace with actual link for Premium
+  '499': 'https://rzp.io/rzp/RfZDhQ9', // Updated link for Basic
+  '797': 'https://rzp.io/rzp/G1de8ts', // Updated link for Standard
+  '999': 'https://rzp.io/rzp/YZUFWokA', // Updated link for Premium
 };
