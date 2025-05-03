@@ -10,8 +10,8 @@ const PackContentsSection: React.FC = () => {
       icon: <CheckCircle className="h-12 w-12 p-2 bg-blue-100 text-intellexa-blue rounded-lg" />,
     },
     {
-      title: "PYQs with Solutions",
-      description: "Topic-wise and year-wise previous year questions with detailed solutions.",
+      title: "Chapter-wise PYQs",
+      description: "Topic-wise and year-wise previous year questions for JEE Mains & Advanced.",
       icon: <FileCheck className="h-12 w-12 p-2 bg-purple-100 text-intellexa-violet rounded-lg" />,
     },
     {
@@ -20,19 +20,9 @@ const PackContentsSection: React.FC = () => {
       icon: <BookOpen className="h-12 w-12 p-2 bg-pink-100 text-intellexa-pink rounded-lg" />,
     },
     {
-      title: "Formula Notebook",
-      description: "All essential formulas organized by subject and topic for quick reference.",
-      icon: <FileText className="h-12 w-12 p-2 bg-green-100 text-green-600 rounded-lg" />,
-    },
-    {
-      title: "Mind Maps",
+      title: "Mindmaps",
       description: "Visual learning aids to boost retention and understand complex relationships between concepts.",
       icon: <BrainCircuit className="h-12 w-12 p-2 bg-orange-100 text-orange-500 rounded-lg" />,
-    },
-    {
-      title: "Cheat Sheets",
-      description: "Compact, high-density information sheets for last-minute revision.",
-      icon: <List className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
     },
     {
       title: "Study Planner",
@@ -40,19 +30,30 @@ const PackContentsSection: React.FC = () => {
       icon: <CalendarCheck className="h-12 w-12 p-2 bg-indigo-100 text-indigo-500 rounded-lg" />,
     },
     {
-      title: "Crash Course Content",
+      title: "DPPs (Daily Practice Problems)",
+      description: "Structured daily practice problems to strengthen concepts and increase speed.",
+      icon: <FileText className="h-12 w-12 p-2 bg-green-100 text-green-600 rounded-lg" />,
+    },
+    {
+      title: "40-day Crash Course",
       description: "Intensive, focused material for rapid learning and last-minute preparation.",
       icon: <Zap className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
     },
     {
-      title: "Test Series with Solutions",
+      title: "Test Series",
       description: "Practice tests that simulate real exam conditions with detailed solution explanations.",
       icon: <BookCheck className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
     },
     {
+      title: "Important Books",
+      description: "Access to essential reference books recommended by top JEE rankers.",
+      icon: <List className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
+    },
+    {
       title: "Instant Digital Delivery",
-      description: "Get all materials delivered instantly to your WhatsApp and Email after purchase.",
+      description: "Get all materials delivered instantly to your Email after purchase.",
       icon: <Send className="h-12 w-12 p-2 bg-teal-100 text-teal-600 rounded-lg" />,
+      highlighted: true,
     },
   ];
 
@@ -69,12 +70,17 @@ const PackContentsSection: React.FC = () => {
         <div className="bg-gradient-to-br from-intellexa-light to-white p-8 rounded-2xl shadow-lg">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {contents.map((item, index) => (
-              <div key={index} className="flex items-start space-x-4">
+              <div 
+                key={index} 
+                className={`flex items-start space-x-4 ${item.highlighted ? 'bg-intellexa-blue/10 p-4 rounded-xl' : ''}`}
+              >
                 <div className="flex-shrink-0">
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-intellexa-dark mb-2">{item.title}</h3>
+                  <h3 className={`text-xl font-bold mb-2 ${item.highlighted ? 'text-intellexa-blue' : 'text-intellexa-dark'}`}>
+                    {item.title}
+                  </h3>
                   <p className="text-gray-600">{item.description}</p>
                 </div>
               </div>
@@ -87,6 +93,9 @@ const PackContentsSection: React.FC = () => {
             </h3>
             <p className="text-gray-700">
               No need to search elsewhere or buy multiple resources. Intellexa Study Pack is designed to be your one-stop solution for JEE preparation. All materials are meticulously organized and structured for maximum learning efficiency.
+            </p>
+            <p className="text-intellexa-blue font-medium mt-3 flex items-center">
+              <Send className="h-5 w-5 mr-2" /> Instant Digital Delivery - Start studying immediately after purchase!
             </p>
           </div>
         </div>

@@ -1,34 +1,32 @@
 
 // Define feature categories to organize display
 export const basicFeatures = [
-  "Syllabus Tracker",
-  "PYQs without solution",
-  "PYQs with solutions",
-  "Short Notes",
-  "Cheat Sheets",
-  "Formula CUM Revision Sheets",
+  "Chapter-wise PYQs (JEE Mains & Advanced)",
+  "Mindmaps",
+  "Short notes",
+  "Study planner",
+  "Syllabus tracker",
+  "Instant Digital Delivery",
 ];
 
 export const standardFeatures = [
-  "Chapterwise PYQs with solutions",
+  "Everything in Basic",
+  "500+ questions per chapter per subject",
   "DPPs",
-  "Mindmaps",
-  "Detailed Notes",
-  "Test Series",
+  "Detailed notes",
 ];
 
 export const premiumFeatures = [
-  "ADV PYQs with solutions",
-  "ADV PYQs without solutions",
-  "Crash Course",
-  "Popular Books",
+  "Everything in Standard",
+  "40-day crash course",
+  "Mentorship by NITians/IITians",
+  "Test series",
+  "Important books",
 ];
 
 // Common benefits across all plans
 export const commonBenefits = [
-  "Instant Digital Delivery",
   "Access on any device",
-  "Study Planner",
 ];
 
 // Payment links

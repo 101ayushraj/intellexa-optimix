@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Clock, BookOpen, FileText, BrainCircuit, Users, Check } from 'lucide-react';
+import { Clock, BookOpen, FileText, BrainCircuit, Users, Check, Send } from 'lucide-react';
 
 const FeaturesSection: React.FC = () => {
   const features = [
@@ -11,7 +11,7 @@ const FeaturesSection: React.FC = () => {
     },
     {
       title: "Designed by Experts & Toppers",
-      description: "Created by those who cracked JEE & NEET with top ranks and experienced educators.",
+      description: "Created by those who cracked JEE with top ranks and experienced educators.",
       icon: <Users className="h-10 w-10 text-intellexa-blue" />,
     },
     {
@@ -20,19 +20,19 @@ const FeaturesSection: React.FC = () => {
       icon: <Clock className="h-10 w-10 text-intellexa-blue" />,
     },
     {
-      title: "Topic-Wise PYQs & Mind Maps",
+      title: "Chapter-Wise PYQs & Mind Maps",
       description: "Master every concept with organized previous year questions and visual learning aids.",
       icon: <BrainCircuit className="h-10 w-10 text-intellexa-blue" />,
     },
     {
       title: "100% Exam Coverage",
-      description: "Comprehensive coverage of the entire JEE & NEET syllabus with no important concept left out.",
+      description: "Comprehensive coverage of the entire JEE syllabus with no important concept left out.",
       icon: <BookOpen className="h-10 w-10 text-intellexa-blue" />,
     },
     {
       title: "Instant Digital Delivery",
-      description: "Receive your complete study pack immediately via WhatsApp and Email after purchase.",
-      icon: <Check className="h-10 w-10 text-intellexa-blue" />,
+      description: "Receive your complete study pack immediately via Email after purchase. No waiting time!",
+      icon: <Send className="h-10 w-10 text-intellexa-blue" />,
     },
   ];
 
@@ -59,6 +59,16 @@ const FeaturesSection: React.FC = () => {
               <p className="text-gray-600">{feature.description}</p>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 mx-auto max-w-3xl bg-intellexa-blue/10 p-6 rounded-xl">
+          <div className="flex items-center gap-3">
+            <Send className="h-6 w-6 text-intellexa-blue" />
+            <h3 className="text-xl font-bold text-intellexa-blue">Instant Digital Delivery Guaranteed!</h3>
+          </div>
+          <p className="mt-2 text-gray-700">
+            We understand the value of your time. That's why all our study materials are delivered instantly to your email after purchase. Start studying immediately without any delays!
+          </p>
         </div>
       </div>
     </section>

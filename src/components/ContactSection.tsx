@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Phone, Mail, MessageSquare, Clock } from 'lucide-react';
+import { Mail, MessageSquare, Clock } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   return (
@@ -20,23 +20,23 @@ const ContactSection: React.FC = () => {
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-intellexa-blue/10 p-3 rounded-full mr-4">
-                  <Phone className="h-6 w-6 text-intellexa-blue" />
-                </div>
-                <div>
-                  <p className="font-semibold text-intellexa-dark">WhatsApp Support</p>
-                  <p className="text-gray-600">+916203346070</p>
-                  <p className="text-sm text-gray-500 mt-1">Quick responses within 2 hours</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-intellexa-blue/10 p-3 rounded-full mr-4">
                   <Mail className="h-6 w-6 text-intellexa-blue" />
                 </div>
                 <div>
                   <p className="font-semibold text-intellexa-dark">Email Support</p>
                   <p className="text-gray-600">intellexa.shop@gmail.com</p>
                   <p className="text-sm text-gray-500 mt-1">We reply within 24 hours</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="bg-intellexa-blue/10 p-3 rounded-full mr-4">
+                  <MessageSquare className="h-6 w-6 text-intellexa-blue" />
+                </div>
+                <div>
+                  <p className="font-semibold text-intellexa-dark">Chat Support</p>
+                  <p className="text-gray-600">Available via Email</p>
+                  <p className="text-sm text-gray-500 mt-1">Get help with your queries</p>
                 </div>
               </div>
             </div>
@@ -46,17 +46,6 @@ const ContactSection: React.FC = () => {
             <h3 className="text-2xl font-bold text-intellexa-dark mb-6">Support Hours</h3>
             
             <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="bg-intellexa-blue/10 p-3 rounded-full mr-4">
-                  <MessageSquare className="h-6 w-6 text-intellexa-blue" />
-                </div>
-                <div>
-                  <p className="font-semibold text-intellexa-dark">Chat Support</p>
-                  <p className="text-gray-600">Available on WhatsApp</p>
-                  <p className="text-sm text-gray-500 mt-1">Get instant help with your queries</p>
-                </div>
-              </div>
-              
               <div className="flex items-start">
                 <div className="bg-intellexa-blue/10 p-3 rounded-full mr-4">
                   <Clock className="h-6 w-6 text-intellexa-blue" />

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import NavBar from '@/components/NavBar';
-import { Mail, Phone, MapPin, ArrowLeft } from 'lucide-react';
+import { Mail, MapPin, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ContactPage: React.FC = () => {
@@ -49,21 +49,6 @@ const ContactPage: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-intellexa-light p-3 rounded-full mr-4">
-                    <Phone className="h-6 w-6 text-intellexa-blue" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-intellexa-dark mb-1">Phone</h3>
-                    <a href="tel:+916203346070" className="text-intellexa-blue hover:underline">
-                      +91 6203346070
-                    </a>
-                    <p className="text-gray-500 text-sm mt-1">
-                      Available Monday to Saturday during business hours.
-                    </p>
-                  </div>
-                </div>
               </div>
               
               <div className="mt-10 pt-8 border-t border-gray-100">
@@ -91,7 +76,7 @@ const ContactPage: React.FC = () => {
       <footer className="bg-intellexa-dark text-white py-6">
         <div className="container-custom text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} Intellexa. All rights reserved.
+            © 2021 Intellexa. All rights reserved.
           </p>
         </div>
       </footer>

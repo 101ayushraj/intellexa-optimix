@@ -6,39 +6,51 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
+      name: "Rohan Mehta",
       credential: "JEE Advanced 2023, Rank 1245",
-      quote: "Intellexa boosted my JEE rank by 2000+ in just 3 months! The organized study material and PYQ section were game-changers for my preparation.",
-      rating: 5,
-    },
-    {
-      name: "Rahul Verma",
-      credential: "JEE Mains 2023, 99.2 percentile",
-      quote: "I wish I had this pack earlier – it made my revision so easy! The mind maps and formula sheets helped me memorize complex concepts quickly.",
-      rating: 5,
-    },
-    {
-      name: "Aditya Patel",
-      credential: "JEE Mains 2023, 99.7 percentile",
-      quote: "Best decision ever! It saved me so much time and effort. The syllabus tracker kept me on schedule, and the test series prepared me perfectly for the real exam.",
-      rating: 5,
-    },
-    {
-      name: "Vishal Kumar",
-      credential: "JEE Advanced 2023, Rank 876",
-      quote: "The cheat sheets and study planner helped me organize my preparation effectively. Highly recommend for serious JEE aspirants!",
+      quote: "The Intellexa study pack completely transformed my JEE preparation. The chapter-wise PYQs and mindmaps were incredibly helpful for quick revision.",
       rating: 5,
     },
     {
       name: "Ananya Singh",
-      credential: "JEE Mains 2023, 99.5 percentile",
-      quote: "The crash course content was perfect for my last-minute revision. Everything is well-organized and easy to follow!",
+      credential: "JEE Mains 2023, 99.6 percentile",
+      quote: "I received instant digital delivery of all materials which saved me precious time. The study planner kept me organized throughout my preparation journey.",
       rating: 5,
     },
     {
-      name: "Rishi Kapoor",
-      credential: "JEE Advanced 2023, Rank 1502",
-      quote: "The formula notebook and mind maps were my saviors during revision week. Worth every rupee spent!",
+      name: "Vikram Sharma",
+      credential: "JEE Advanced 2023, Rank 1879",
+      quote: "The syllabus tracker and chapter-wise questions helped me identify my weak areas quickly. Definitely worth the investment!",
+      rating: 5,
+    },
+    {
+      name: "Priya Patel",
+      credential: "JEE Mains 2023, 99.5 percentile",
+      quote: "The detailed notes were comprehensive yet concise. I especially loved how everything was delivered instantly after purchase.",
+      rating: 5,
+    },
+    {
+      name: "Arjun Kapoor",
+      credential: "JEE Advanced 2023, Rank 2143",
+      quote: "The 40-day crash course in the Premium Pack was a game-changer for my last-minute preparation. The mentorship from IITians gave me valuable insights.",
+      rating: 5,
+    },
+    {
+      name: "Neha Verma",
+      credential: "JEE Mains 2023, 99.7 percentile",
+      quote: "The mindmaps and DPPs helped me strengthen my concepts. The test series accurately simulated the actual exam environment.",
+      rating: 5,
+    },
+    {
+      name: "Sahil Kumar",
+      credential: "JEE Advanced 2023, Rank 2867",
+      quote: "Having over 500 questions per chapter helped me practice thoroughly. The syllabus tracker ensured I didn't miss any important topics.",
+      rating: 5,
+    },
+    {
+      name: "Ishita Jain",
+      credential: "JEE Mains 2023, 99.6 percentile",
+      quote: "The instant digital delivery was a relief as I could start studying immediately. The short notes were perfect for quick revisions before the exam.",
       rating: 5,
     },
   ];
