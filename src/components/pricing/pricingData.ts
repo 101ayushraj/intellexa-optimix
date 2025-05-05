@@ -1,20 +1,23 @@
 
 // Define feature categories to organize display
 export const basicFeatures = [
-  "Chapterwise PYQs (JEE Mains & Advanced)",
+  "Chapterwise PYQs",
+  "JEE Mains PYQs as Question Paper",
+  "JEE Advanced PYQs as Question Paper",
+  "All PYQs Solutions",
   "Mindmaps",
   "Short notes",
   "Study planner",
   "Syllabus tracker",
-  "Cheat sheets and Formula sheet",
-  "Instant Digital Delivery",
+  "Formula sheets",
+  "Instant Digital Delivery & Access on any device",
 ];
 
 export const standardFeatures = [
-  "500+ questions per chapter per subject",
+  "500+ questions per chapter",
   "DPPs",
   "Detailed notes",
-  "Cheat sheets and Formula sheet",
+  "Formula sheets",
 ];
 
 export const premiumFeatures = [
@@ -25,9 +28,7 @@ export const premiumFeatures = [
 ];
 
 // Common benefits across all plans
-export const commonBenefits = [
-  "Access on any device",
-];
+export const commonBenefits = [];
 
 // Payment links
 export const paymentLinks: Record<string, string> = {

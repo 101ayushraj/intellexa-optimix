@@ -17,7 +17,7 @@ const PricingFeature: React.FC<PricingFeatureProps> = ({ feature, available }) =
           <X className="h-4 w-4 text-red-500" />
         )}
       </div>
-      <p className={`${available ? 'text-gray-700' : 'text-gray-500'} ${!available && 'opacity-60'}`}>
+      <p className={`${available ? 'text-gray-700' : 'text-gray-500 text-sm'} ${!available && 'opacity-60'}`}>
         {feature}
       </p>
     </div>

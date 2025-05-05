@@ -5,14 +5,29 @@ import { FileText, BookOpen, BrainCircuit, CheckCircle, FileCheck, Calendar, Use
 const PackContentsSection: React.FC = () => {
   const contents = [
     {
+      title: "Chapterwise PYQs",
+      description: "Topic-wise previous year questions for JEE Mains & Advanced.",
+      icon: <FileCheck className="h-12 w-12 p-2 bg-purple-100 text-intellexa-violet rounded-lg" />,
+    },
+    {
+      title: "JEE Mains PYQs as Question Paper",
+      description: "Complete JEE Mains previous year papers organized by year.",
+      icon: <FileCheck className="h-12 w-12 p-2 bg-blue-100 text-intellexa-blue rounded-lg" />,
+    },
+    {
+      title: "JEE Advanced PYQs as Question Paper",
+      description: "Complete JEE Advanced previous year papers organized by year.",
+      icon: <FileCheck className="h-12 w-12 p-2 bg-pink-100 text-intellexa-pink rounded-lg" />,
+    },
+    {
+      title: "All PYQs Solutions",
+      description: "Detailed solutions to all previous year questions for better understanding.",
+      icon: <FileCheck className="h-12 w-12 p-2 bg-green-100 text-green-600 rounded-lg" />,
+    },
+    {
       title: "Short Notes",
       description: "Concise notes covering key concepts and formulas for quick revision.",
       icon: <CheckCircle className="h-12 w-12 p-2 bg-blue-100 text-intellexa-blue rounded-lg" />,
-    },
-    {
-      title: "Chapterwise PYQs",
-      description: "Topic-wise and year-wise previous year questions for JEE Mains & Advanced.",
-      icon: <FileCheck className="h-12 w-12 p-2 bg-purple-100 text-intellexa-violet rounded-lg" />,
     },
     {
       title: "Mind Maps",
@@ -35,9 +50,14 @@ const PackContentsSection: React.FC = () => {
       icon: <FileText className="h-12 w-12 p-2 bg-green-100 text-green-600 rounded-lg" />,
     },
     {
-      title: "Cheat Sheets & Formula Sheets",
-      description: "Quick reference materials with important formulas and concepts for rapid revision.",
+      title: "Formula Sheets",
+      description: "Quick reference materials with important formulas for rapid revision.",
       icon: <FileText className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
+    },
+    {
+      title: "500+ Questions per Chapter",
+      description: "Extensive practice material for each chapter to ensure thorough understanding.",
+      icon: <FileCheck className="h-12 w-12 p-2 bg-indigo-100 text-indigo-600 rounded-lg" />,
     },
     {
       title: "40-day Crash Course",
