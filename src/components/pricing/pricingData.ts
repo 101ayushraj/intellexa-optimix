@@ -19,6 +19,7 @@ export const standardFeatures = [
 
 export const premiumFeatures = [
   "40-day Crash course",
+  "Mentorship by NITians/IITians",
   "Test series",
   "Important books",
 ];

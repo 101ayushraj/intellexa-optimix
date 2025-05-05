@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { FileText, BookOpen, CheckCircle, BookCheck, BrainCircuit, FileCheck, Send, CalendarCheck, Zap, List } from 'lucide-react';
+import { FileText, BookOpen, BrainCircuit, CheckCircle, FileCheck, Calendar, Users } from 'lucide-react';
 
 const PackContentsSection: React.FC = () => {
   const contents = [
     {
-      title: "Full Syllabus Tracker",
-      description: "Keep track of your progress and ensure you cover every topic in the syllabus.",
+      title: "Short Notes",
+      description: "Concise notes covering key concepts and formulas for quick revision.",
       icon: <CheckCircle className="h-12 w-12 p-2 bg-blue-100 text-intellexa-blue rounded-lg" />,
     },
     {
@@ -15,19 +15,19 @@ const PackContentsSection: React.FC = () => {
       icon: <FileCheck className="h-12 w-12 p-2 bg-purple-100 text-intellexa-violet rounded-lg" />,
     },
     {
-      title: "Detailed Notes & Short Notes",
-      description: "Comprehensive notes for deep learning and concise notes for quick revision.",
-      icon: <BookOpen className="h-12 w-12 p-2 bg-pink-100 text-intellexa-pink rounded-lg" />,
-    },
-    {
-      title: "Mindmaps",
-      description: "Visual learning aids to boost retention and understand complex relationships between concepts.",
+      title: "Mind Maps",
+      description: "Visual learning aids to understand connections between concepts and topics.",
       icon: <BrainCircuit className="h-12 w-12 p-2 bg-orange-100 text-orange-500 rounded-lg" />,
     },
     {
+      title: "Detailed Notes",
+      description: "Comprehensive notes with thorough explanations of concepts and examples.",
+      icon: <BookOpen className="h-12 w-12 p-2 bg-pink-100 text-intellexa-pink rounded-lg" />,
+    },
+    {
       title: "Study Planner",
-      description: "Customizable study schedules to optimize your preparation time.",
-      icon: <CalendarCheck className="h-12 w-12 p-2 bg-indigo-100 text-indigo-500 rounded-lg" />,
+      description: "Structured study schedule to help you cover the entire syllabus efficiently.",
+      icon: <Calendar className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
     },
     {
       title: "DPPs (Daily Practice Problems)",
@@ -41,24 +41,13 @@ const PackContentsSection: React.FC = () => {
     },
     {
       title: "40-day Crash Course",
-      description: "Intensive, focused material for rapid learning and last-minute preparation.",
-      icon: <Zap className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
+      description: "Intensive short-term course designed for last-minute preparation and revision.",
+      icon: <Calendar className="h-12 w-12 p-2 bg-indigo-100 text-indigo-600 rounded-lg" />,
     },
     {
-      title: "Test Series",
-      description: "Practice tests that simulate real exam conditions with detailed solution explanations.",
-      icon: <BookCheck className="h-12 w-12 p-2 bg-yellow-100 text-yellow-600 rounded-lg" />,
-    },
-    {
-      title: "Important Books",
-      description: "Access to essential reference books recommended by top JEE rankers.",
-      icon: <List className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
-    },
-    {
-      title: "Instant Digital Delivery",
-      description: "Get all materials delivered instantly to your Email after purchase.",
-      icon: <Send className="h-12 w-12 p-2 bg-teal-100 text-teal-600 rounded-lg" />,
-      highlighted: true,
+      title: "Mentorship by NITians/IITians",
+      description: "Personalized guidance and support from students who have successfully cracked JEE.",
+      icon: <Users className="h-12 w-12 p-2 bg-blue-100 text-intellexa-blue rounded-lg" />,
     },
   ];
 
@@ -66,43 +55,25 @@ const PackContentsSection: React.FC = () => {
     <section className="py-20 bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="section-heading">What's Inside the Intellexa Study Pack?</h2>
+          <h2 className="section-heading">What's Inside Our JEE Study Pack?</h2>
           <p className="section-subheading">
-            Our comprehensive pack contains everything you need to excel in your JEE preparation.
+            Our meticulously designed study packs include everything you need for successful JEE preparation
           </p>
         </div>
         
-        <div className="bg-gradient-to-br from-intellexa-light to-white p-8 rounded-2xl shadow-lg">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contents.map((item, index) => (
-              <div 
-                key={index} 
-                className={`flex items-start space-x-4 ${item.highlighted ? 'bg-intellexa-blue/10 p-4 rounded-xl' : ''}`}
-              >
-                <div className="flex-shrink-0">
-                  {item.icon}
-                </div>
-                <div>
-                  <h3 className={`text-xl font-bold mb-2 ${item.highlighted ? 'text-intellexa-blue' : 'text-intellexa-dark'}`}>
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {contents.map((content, index) => (
+            <div 
+              key={index}
+              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="mb-4">
+                {content.icon}
               </div>
-            ))}
-          </div>
-          
-          <div className="mt-10 bg-intellexa-blue/10 p-6 rounded-xl">
-            <h3 className="text-xl font-bold text-intellexa-blue mb-3 flex items-center">
-              <CheckCircle className="h-6 w-6 mr-2" /> Everything You Need in One Place
-            </h3>
-            <p className="text-gray-700">
-              No need to search elsewhere or buy multiple resources. Intellexa Study Pack is designed to be your one-stop solution for JEE preparation. All materials are meticulously organized and structured for maximum learning efficiency.
-            </p>
-            <p className="text-intellexa-blue font-medium mt-3 flex items-center">
-              <Send className="h-5 w-5 mr-2" /> Instant Digital Delivery - Start studying immediately after purchase!
-            </p>
-          </div>
+              <h3 className="text-xl font-bold text-intellexa-dark mb-2">{content.title}</h3>
+              <p className="text-gray-600">{content.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
