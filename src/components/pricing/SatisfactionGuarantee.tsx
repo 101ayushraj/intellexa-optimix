@@ -13,7 +13,7 @@ const SatisfactionGuarantee: React.FC = () => {
             If you're not satisfied with the quality of our study materials, contact us within 7 days of purchase for a full refund.
           </p>
           <p className="mt-2 text-gray-600">
-            <span className="font-medium">WhatsApp Support:</span> +916203346070
+            <span className="font-medium">Email Support:</span> intellexa.shop@gmail.com
           </p>
         </div>
       </div>

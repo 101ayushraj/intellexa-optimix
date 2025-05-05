@@ -1,3 +1,4 @@
+
 import React from 'react';
 import CTAButton from './CTAButton';
 import { ArrowRight, Check, Clock, BookOpen, FileText, BrainCircuit } from 'lucide-react';
@@ -104,6 +105,17 @@ const HeroSection: React.FC = () => {
                 onClick={scrollToPayment}
                 icon={<ArrowRight className="h-5 w-5" />}
               />
+            </div>
+            
+            <div className="flex items-center text-sm">
+              <a 
+                href="https://drive.google.com/drive/folders/1-rtrFgpMAe8a3C3_ys03RLIgUGfhiAxT?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-intellexa-blue hover:underline"
+              >
+                View Sample Materials
+              </a>
             </div>
             
             <p className="text-red-500 font-medium flex items-center text-sm">
