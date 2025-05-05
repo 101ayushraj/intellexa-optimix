@@ -10,7 +10,7 @@ const PackContentsSection: React.FC = () => {
       icon: <CheckCircle className="h-12 w-12 p-2 bg-blue-100 text-intellexa-blue rounded-lg" />,
     },
     {
-      title: "Chapter-wise PYQs",
+      title: "Chapterwise PYQs",
       description: "Topic-wise and year-wise previous year questions for JEE Mains & Advanced.",
       icon: <FileCheck className="h-12 w-12 p-2 bg-purple-100 text-intellexa-violet rounded-lg" />,
     },
@@ -33,6 +33,11 @@ const PackContentsSection: React.FC = () => {
       title: "DPPs (Daily Practice Problems)",
       description: "Structured daily practice problems to strengthen concepts and increase speed.",
       icon: <FileText className="h-12 w-12 p-2 bg-green-100 text-green-600 rounded-lg" />,
+    },
+    {
+      title: "Cheat Sheets & Formula Sheets",
+      description: "Quick reference materials with important formulas and concepts for rapid revision.",
+      icon: <FileText className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
     },
     {
       title: "40-day Crash Course",

@@ -1,11 +1,12 @@
 
 // Define feature categories to organize display
 export const basicFeatures = [
-  "Chapter-wise PYQs (JEE Mains & Advanced)",
+  "Chapterwise PYQs (JEE Mains & Advanced)",
   "Mindmaps",
   "Short notes",
   "Study planner",
   "Syllabus tracker",
+  "Cheat sheets and Formula sheet",
   "Instant Digital Delivery",
 ];
 
@@ -13,11 +14,11 @@ export const standardFeatures = [
   "500+ questions per chapter per subject",
   "DPPs",
   "Detailed notes",
+  "Cheat sheets and Formula sheet",
 ];
 
 export const premiumFeatures = [
-  "40-day crash course",
-  "Mentorship by NITians/IITians",
+  "40-day Crash course",
   "Test series",
   "Important books",
 ];
