@@ -14,7 +14,7 @@ export const basicFeatures = [
 ];
 
 export const standardFeatures = [
-  "500+ questions per chapter",
+  "500+ questions per chapter booklet",
   "DPPs",
   "Detailed notes",
   "Formula sheets",

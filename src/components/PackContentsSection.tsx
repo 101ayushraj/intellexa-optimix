@@ -55,7 +55,7 @@ const PackContentsSection: React.FC = () => {
       icon: <FileText className="h-12 w-12 p-2 bg-red-100 text-red-500 rounded-lg" />,
     },
     {
-      title: "500+ Questions per Chapter",
+      title: "500+ Questions per Chapter Booklet",
       description: "Extensive practice material for each chapter to ensure thorough understanding.",
       icon: <FileCheck className="h-12 w-12 p-2 bg-indigo-100 text-indigo-600 rounded-lg" />,
     },
