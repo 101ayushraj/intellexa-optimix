@@ -19,8 +19,7 @@ const HeroSection: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-intellexa-blue mb-4">Our Mission</h2>
           <p className="text-lg text-gray-700">
             At Intellexa, we help students save valuable time by providing the most relevant and 
-            high-quality study materials in one place. We've carefully collected and structured content 
-            from across the internet to create the most efficient learning experience for JEE aspirants.
+            high-quality study materials in one place.
           </p>
         </div>
         
@@ -108,14 +107,12 @@ const HeroSection: React.FC = () => {
             </div>
             
             <div className="flex items-center text-sm">
-              <a 
-                href="https://drive.google.com/drive/folders/1-rtrFgpMAe8a3C3_ys03RLIgUGfhiAxT?usp=sharing" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-intellexa-blue hover:underline"
-              >
-                View Sample Materials
-              </a>
+              <CTAButton 
+                text="View Sample Materials" 
+                type="primary"
+                className="py-2 px-4 text-sm"
+                onClick={() => window.open("https://drive.google.com/drive/folders/1-rtrFgpMAe8a3C3_ys03RLIgUGfhiAxT?usp=sharing", "_blank")}
+              />
             </div>
             
             <p className="text-red-500 font-medium flex items-center text-sm">
