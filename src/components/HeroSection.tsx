@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
           <div className="w-full lg:w-1/2 space-y-6 mb-10 lg:mb-0">
             <div className="inline-block px-3 py-1 rounded-full bg-intellexa-light border border-intellexa-blue/20 text-intellexa-blue font-medium text-sm mb-2">
               <span className="flex items-center">
-                <Clock className="h-4 w-4 mr-1" /> Limited Time Offer - 50% OFF
+                <Clock className="h-4 w-4 mr-1" /> 50% OFF
               </span>
             </div>
             

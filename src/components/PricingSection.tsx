@@ -67,9 +67,6 @@ const PricingSection: React.FC = () => {
           <p className="section-subheading">
             Select the package that best fits your preparation needs and goals.
           </p>
-          <p className="text-intellexa-blue font-medium text-lg mt-4">
-            <span className="bg-yellow-100 px-3 py-1 rounded-full">Limited Time Offer: Discounted prices for first 250 buyers only!</span>
-          </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
