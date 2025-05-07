@@ -1,3 +1,4 @@
+
 // Define feature categories to organize display
 export const basicFeatures = [
   "Chapterwise PYQs",
@@ -7,6 +8,7 @@ export const basicFeatures = [
   "Mindmaps",
   "Short notes",
   "Study planner",
+  "Syllabus tracker",
   "Formula sheets",
   "Instant Digital Delivery & Access on any device",
 ];
