@@ -2,6 +2,7 @@
 import React from 'react';
 import CTAButton from './CTAButton';
 import { ArrowRight, Check, Clock, BookOpen, FileText, BrainCircuit } from 'lucide-react';
+import { basicFeatures, standardFeatures } from './pricing/pricingData';
 
 const HeroSection: React.FC = () => {
   const scrollToPayment = () => {
@@ -93,17 +94,32 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <div className="flex flex-col">
-                <p className="text-gray-500 line-through text-xl">₹799</p>
-                <p className="text-3xl font-bold text-intellexa-dark">₹499 <span className="text-green-600 text-lg font-medium">only</span></p>
+            <div className="pt-4 flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex flex-col">
+                  <p className="text-gray-500 line-through text-xl">₹799</p>
+                  <p className="text-3xl font-bold text-intellexa-dark">₹499 <span className="text-green-600 text-lg font-medium">only</span></p>
+                </div>
+                
+                <CTAButton 
+                  text="Buy Now @ ₹499" 
+                  onClick={scrollToPayment}
+                  icon={<ArrowRight className="h-5 w-5" />}
+                />
               </div>
-              
-              <CTAButton 
-                text="Buy Now @ ₹499" 
-                onClick={scrollToPayment}
-                icon={<ArrowRight className="h-5 w-5" />}
-              />
+
+              {/* Standard Pack Content Summary */}
+              <div className="bg-white rounded-lg border border-intellexa-blue/20 p-4 shadow-sm">
+                <h3 className="font-bold text-intellexa-blue mb-2">Standard Pack Includes:</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {[...basicFeatures, ...standardFeatures].map((feature, idx) => (
+                    <div key={idx} className="flex items-start">
+                      <Check className="h-4 w-4 text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <p className="text-sm text-gray-700">{feature}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
             
             <p className="text-red-500 font-medium flex items-center text-sm">
