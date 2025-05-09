@@ -22,24 +22,12 @@ const PricingSection: React.FC = () => {
   // Define the plans and their features
   const plans = [
     {
-      id: 'basic',
-      name: 'Basic Pack',
-      description: 'Essential materials for JEE preparation',
-      originalPrice: '999',
-      price: '499',
-      discount: '50%',
-      features: [...basicFeatures],
-      unavailableFeatures: [...standardFeatures, ...premiumFeatures],
-      isPopular: false,
-      icon: <Badge className="h-5 w-5" />
-    },
-    {
       id: 'standard',
       name: 'Standard Pack',
       description: 'Comprehensive preparation materials',
-      originalPrice: '1599',
-      price: '797',
-      discount: '50%',
+      originalPrice: '799',
+      price: '499',
+      discount: '38%',
       features: [...basicFeatures, ...standardFeatures],
       unavailableFeatures: [...premiumFeatures],
       isPopular: true,
@@ -49,9 +37,9 @@ const PricingSection: React.FC = () => {
       id: 'premium',
       name: 'Premium Pack',
       description: 'Complete preparation for JEE & Advanced',
-      originalPrice: '2599',
-      price: '999',
-      discount: '62%',
+      originalPrice: '999',
+      price: '797',
+      discount: '20%',
       features: [...basicFeatures, ...standardFeatures, ...premiumFeatures],
       unavailableFeatures: [],
       isPopular: false,
@@ -69,7 +57,7 @@ const PricingSection: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {plans.map((plan) => (
             <PricingCard
               key={plan.id}

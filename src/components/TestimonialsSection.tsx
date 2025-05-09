@@ -7,7 +7,7 @@ const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       name: "Rohan Mehta",
-      credential: "JEE Advanced 2023, Rank 1245",
+      credential: "JEE Advanced 2023, Rank 2345",
       quote: "The Intellexa study pack completely transformed my JEE preparation. The chapter-wise PYQs and mindmaps were incredibly helpful for quick revision.",
       rating: 5,
     },
@@ -19,7 +19,7 @@ const TestimonialsSection: React.FC = () => {
     },
     {
       name: "Vikram Sharma",
-      credential: "JEE Advanced 2023, Rank 1879",
+      credential: "JEE Advanced 2023, Rank 2879",
       quote: "The syllabus tracker and chapter-wise questions helped me identify my weak areas quickly. Definitely worth the investment!",
       rating: 5,
     },
@@ -44,7 +44,7 @@ const TestimonialsSection: React.FC = () => {
     {
       name: "Sahil Kumar",
       credential: "JEE Advanced 2023, Rank 2867",
-      quote: "Having over 500 questions per chapter helped me practice thoroughly. The syllabus tracker ensured I didn't miss any important topics.",
+      quote: "Having over 500 questions per chapter booklet helped me practice thoroughly. The syllabus tracker ensured I didn't miss any important topics.",
       rating: 5,
     },
     {
