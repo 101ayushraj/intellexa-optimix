@@ -95,7 +95,7 @@ const HeroSection: React.FC = () => {
             
             <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className="flex flex-col">
-                <p className="text-gray-500 line-through text-xl">₹999</p>
+                <p className="text-gray-500 line-through text-xl">₹799</p>
                 <p className="text-3xl font-bold text-intellexa-dark">₹499 <span className="text-green-600 text-lg font-medium">only</span></p>
               </div>
               
@@ -103,15 +103,6 @@ const HeroSection: React.FC = () => {
                 text="Buy Now @ ₹499" 
                 onClick={scrollToPayment}
                 icon={<ArrowRight className="h-5 w-5" />}
-              />
-            </div>
-            
-            <div className="flex items-center text-sm">
-              <CTAButton 
-                text="View Sample Materials" 
-                type="primary"
-                className="py-2 px-4 text-sm"
-                onClick={() => window.open("https://drive.google.com/drive/folders/1-rtrFgpMAe8a3C3_ys03RLIgUGfhiAxT?usp=sharing", "_blank")}
               />
             </div>
             

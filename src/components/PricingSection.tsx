@@ -30,7 +30,7 @@ const PricingSection: React.FC = () => {
       discount: '38%',
       features: [...basicFeatures, ...standardFeatures],
       unavailableFeatures: [...premiumFeatures],
-      isPopular: true,
+      isPopular: false,
       icon: <Check className="h-5 w-5" />
     },
     {
@@ -42,7 +42,7 @@ const PricingSection: React.FC = () => {
       discount: '20%',
       features: [...basicFeatures, ...standardFeatures, ...premiumFeatures],
       unavailableFeatures: [],
-      isPopular: false,
+      isPopular: true,
       icon: <Crown className="h-5 w-5" />
     }
   ];
@@ -50,11 +50,19 @@ const PricingSection: React.FC = () => {
   return (
     <section id="pricing" className="py-20 bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="section-heading">Choose Your JEE Study Pack</h2>
-          <p className="section-subheading">
+          <p className="section-subheading mb-4">
             Select the package that best fits your preparation needs and goals.
           </p>
+          <a 
+            href="https://drive.google.com/drive/folders/1-rtrFgpMAe8a3C3_ys03RLIgUGfhiAxT?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-intellexa-blue hover:text-intellexa-violet inline-flex items-center transition-colors"
+          >
+            View Sample Materials
+          </a>
         </div>
         
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
