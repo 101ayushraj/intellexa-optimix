@@ -7,6 +7,12 @@ const Redirect = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // Trigger Facebook Pixel PageView on route changes
+    if (window.fbq) {
+      window.fbq('track', 'PageView');
+      console.log('Facebook Pixel PageView event triggered');
+    }
+
     // Listen for the beforeunload event (refresh)
     const handleBeforeUnload = () => {
       // We can't prevent navigation here, but we can set a flag in sessionStorage
