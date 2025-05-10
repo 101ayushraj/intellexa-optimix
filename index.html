@@ -19,8 +19,9 @@
     <meta name="twitter:image" content="/lovable-uploads/39356db0-a1f9-46e0-a0f3-e5e15eaa9c13.png" />
     <link rel="icon" href="/lovable-uploads/39356db0-a1f9-46e0-a0f3-e5e15eaa9c13.png" type="image/png" />
     
-    <!-- Meta Pixel Code (Script part) - Prioritized -->
+    <!-- Meta Pixel Code - With improved initialization -->
     <script>
+    // Define fbq function first before attempting to call it
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -29,12 +30,17 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1028618115904186');
-    // Ensure PageView fires immediately
-    fbq('track', 'PageView');
-    console.log('Facebook Pixel initialized in HTML head');
+    
+    // Wrap in a try-catch to handle any initialization errors
+    try {
+      fbq('init', '1028618115904186');
+      // Don't fire PageView immediately - we'll do this after the page loads
+      console.log('Facebook Pixel initialized successfully');
+    } catch (err) {
+      console.error('Failed to initialize Facebook Pixel:', err);
+    }
     </script>
-    <!-- End Meta Pixel Code (Script part) -->
+    <!-- End Meta Pixel Code -->
   </head>
 
   <body>

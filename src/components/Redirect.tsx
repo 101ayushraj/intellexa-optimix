@@ -7,14 +7,32 @@ const Redirect = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Ensure Facebook Pixel is properly initialized
-    if (window.fbq) {
-      // Force PageView event on every route change
-      window.fbq('track', 'PageView');
-      console.log('Facebook Pixel PageView event triggered on route change to:', location.pathname);
-    } else {
-      console.error('Facebook Pixel not initialized properly');
-    }
+    // Function to safely fire Facebook Pixel events
+    const firePageView = () => {
+      if (typeof window !== 'undefined' && window.fbq) {
+        try {
+          window.fbq('track', 'PageView');
+          console.log('Facebook Pixel PageView event fired on route change to:', location.pathname);
+        } catch (error) {
+          console.error('Error firing Facebook Pixel PageView event:', error);
+        }
+      } else {
+        console.warn('Facebook Pixel not available on route change');
+        
+        // Retry after a short delay if fbq is not available
+        setTimeout(() => {
+          if (window.fbq) {
+            window.fbq('track', 'PageView');
+            console.log('Facebook Pixel PageView event fired on retry');
+          } else {
+            console.error('Facebook Pixel still not available after retry');
+          }
+        }, 1500);
+      }
+    };
+
+    // Fire PageView event on route change
+    firePageView();
 
     // Listen for the beforeunload event (refresh)
     const handleBeforeUnload = () => {
