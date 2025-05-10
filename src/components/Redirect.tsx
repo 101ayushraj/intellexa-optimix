@@ -48,9 +48,12 @@ const Redirect = () => {
     // Clear the flag immediately to prevent issues
     sessionStorage.removeItem('wasRefreshed');
     
-    // Always redirect to home if we're on a non-root page after refresh
-    // OR if we're on the success page (regardless of refresh)
-    if ((wasRefreshed && location.pathname !== '/') || 
+    // UPDATED: Allow the thank-you page paths to be accessed directly
+    // Only redirect if we're on a non-root page after refresh
+    // OR if we're on the success page (legacy path)
+    if ((wasRefreshed && location.pathname !== '/' && 
+         !location.pathname.includes('thank-you') && 
+         !location.pathname.includes('thankyou')) || 
         location.pathname.includes('success')) {
       
       // Log the redirect

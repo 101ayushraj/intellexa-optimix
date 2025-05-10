@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import ContactPage from "./pages/ContactPage";
 import RefundPolicyPage from "./pages/RefundPolicyPage";
 import SuccessPage from "./pages/SuccessPage";
+import ThankYouPage from "./pages/ThankYouPage";
 import Redirect from "./components/Redirect";
 
 // Create a new QueryClient instance
@@ -28,10 +29,16 @@ const App: React.FC = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/refund-policy" element={<RefundPolicyPage />} />
             
-            {/* Make success route more robust with variations */}
+            {/* Success routes for backwards compatibility */}
             <Route path="/success" element={<SuccessPage />} />
             <Route path="/success/" element={<SuccessPage />} />
             <Route path="/success.html" element={<SuccessPage />} />
+            
+            {/* Thank you page routes for Razorpay */}
+            <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/thank-you/" element={<ThankYouPage />} />
+            <Route path="/thankyou" element={<ThankYouPage />} />
+            <Route path="/thankyou/" element={<ThankYouPage />} />
             
             {/* Handle any potential direct navigation to index.html */}
             <Route path="/index.html" element={<Navigate to="/" replace />} />

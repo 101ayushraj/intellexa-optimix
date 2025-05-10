@@ -30,9 +30,9 @@ export const premiumFeatures = [
 // Common benefits across all plans
 export const commonBenefits = [];
 
-// Payment links
+// Payment links with thank-you page redirect
 export const paymentLinks: Record<string, string> = {
-  '499': 'https://rzp.io/rzp/RfZDhQ9', // Updated link for Basic
-  '797': 'https://rzp.io/rzp/G1de8ts', // Updated link for Standard
-  '999': 'https://rzp.io/rzp/YZUFWokA', // Updated link for Premium
+  '499': 'https://rzp.io/rzp/RfZDhQ9', // Standard pack link
+  '797': 'https://rzp.io/rzp/G1de8ts', // Premium pack link
+  '999': 'https://rzp.io/rzp/YZUFWokA', // Legacy link
 };

@@ -1,11 +1,31 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import NavBar from '@/components/NavBar';
-import { Check, Mail } from 'lucide-react';
+import { Check, Mail, ThumbsUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { toast } from 'sonner';
 
 const ThankYouPage: React.FC = () => {
+  
+  useEffect(() => {
+    // Fire a purchase event for Facebook Pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      try {
+        window.fbq('track', 'Purchase', {
+          currency: 'INR',
+          value: 1.00  // This should ideally be the actual purchase amount
+        });
+        console.log('Facebook Pixel Purchase event fired');
+      } catch (error) {
+        console.error('Error firing Facebook Pixel Purchase event:', error);
+      }
+    }
+    
+    // Show confirmation toast
+    toast.success("Payment successful! Thank you for your purchase.");
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <NavBar />
@@ -52,6 +72,17 @@ const ThankYouPage: React.FC = () => {
                 </Link>
               </div>
             </div>
+          </div>
+          
+          <div className="mt-12 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <div className="flex items-center justify-center mb-4">
+              <ThumbsUp className="h-6 w-6 text-intellexa-blue mr-2" />
+              <h3 className="font-semibold text-lg">Access Instructions</h3>
+            </div>
+            <p className="text-gray-600">
+              Your purchase details and access instructions have been sent to your email address.
+              If you don't receive them within 10 minutes, please check your spam folder or contact our support team.
+            </p>
           </div>
           
           <p className="text-gray-500 mt-8">
