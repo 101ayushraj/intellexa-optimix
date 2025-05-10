@@ -7,10 +7,13 @@ const Redirect = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Trigger Facebook Pixel PageView on route changes
+    // Ensure Facebook Pixel is properly initialized
     if (window.fbq) {
+      // Force PageView event on every route change
       window.fbq('track', 'PageView');
-      console.log('Facebook Pixel PageView event triggered');
+      console.log('Facebook Pixel PageView event triggered on route change to:', location.pathname);
+    } else {
+      console.error('Facebook Pixel not initialized properly');
     }
 
     // Listen for the beforeunload event (refresh)
