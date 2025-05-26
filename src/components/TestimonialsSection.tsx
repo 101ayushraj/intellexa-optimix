@@ -9,25 +9,21 @@ const TestimonialsSection: React.FC = () => {
       name: "Arjun Gupta",
       credential: "JEE Mains 2025, Rank 2156",
       quote: "The Intellexa study pack was a game-changer for my JEE preparation. The chapter-wise PYQs and mindmaps helped me understand the pattern perfectly.",
-      rating: 4.8,
     },
     {
       name: "Kavya Sharma",
       credential: "JEE Mains 2025, Rank 3487",
       quote: "Amazing study material! The instant digital delivery saved me so much time, and the study planner kept me on track throughout my preparation.",
-      rating: 4.8,
     },
     {
       name: "Rohit Verma",
       credential: "JEE Mains 2025, Rank 4023",
       quote: "The detailed notes and formula sheets were incredibly helpful. I could revise quickly before the exam and felt confident on test day.",
-      rating: 4.8,
     },
     {
       name: "Priya Singh",
       credential: "JEE Mains 2025, Rank 2789",
       quote: "The syllabus tracker ensured I didn't miss any important topics. The mindmaps made complex concepts so much easier to understand and remember.",
-      rating: 4.8,
     },
   ];
 
@@ -38,16 +34,16 @@ const TestimonialsSection: React.FC = () => {
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <Star key={i} fill="#FFD700" stroke="#FFD700" className="h-5 w-5" />
+        <Star key={i} fill="#FFD700" stroke="#FFD700" className="h-6 w-6" />
       );
     }
 
     if (hasPartialStar) {
       stars.push(
         <div key="partial" className="relative">
-          <Star className="h-5 w-5 text-gray-300" />
+          <Star className="h-6 w-6 text-gray-300" />
           <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
-            <Star fill="#FFD700" stroke="#FFD700" className="h-5 w-5" />
+            <Star fill="#FFD700" stroke="#FFD700" className="h-6 w-6" />
           </div>
         </div>
       );
@@ -56,7 +52,7 @@ const TestimonialsSection: React.FC = () => {
     const remainingStars = 5 - Math.ceil(rating);
     for (let i = 0; i < remainingStars; i++) {
       stars.push(
-        <Star key={`empty-${i}`} className="h-5 w-5 text-gray-300" />
+        <Star key={`empty-${i}`} className="h-6 w-6 text-gray-300" />
       );
     }
 
@@ -71,6 +67,15 @@ const TestimonialsSection: React.FC = () => {
           <p className="section-subheading">
             See how our recent JEE Mains 2025 toppers achieved their dream ranks with Intellexa Study Pack.
           </p>
+          
+          {/* Single rating display */}
+          <div className="flex items-center justify-center mt-8 mb-12">
+            <div className="flex items-center">
+              {renderStars(4.8)}
+              <span className="ml-3 text-2xl font-bold text-gray-700">4.8/5</span>
+            </div>
+            <span className="ml-4 text-lg text-gray-600">Based on verified JEE 2025 results</span>
+          </div>
         </div>
         
         <Carousel className="max-w-4xl mx-auto">
@@ -78,11 +83,6 @@ const TestimonialsSection: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
-                  <div className="flex items-center mb-4">
-                    {renderStars(testimonial.rating)}
-                    <span className="ml-2 text-sm text-gray-600 font-medium">{testimonial.rating}/5</span>
-                  </div>
-                  
                   <p className="text-gray-700 italic mb-6">"{testimonial.quote}"</p>
                   
                   <div className="flex items-center mt-auto">
