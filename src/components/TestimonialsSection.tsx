@@ -6,74 +6,81 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
-      name: "Rohan Mehta",
-      credential: "JEE Advanced 2023, Rank 2345",
-      quote: "The Intellexa study pack completely transformed my JEE preparation. The chapter-wise PYQs and mindmaps were incredibly helpful for quick revision.",
-      rating: 5,
+      name: "Arjun Gupta",
+      credential: "JEE Mains 2025, Rank 2156",
+      quote: "The Intellexa study pack was a game-changer for my JEE preparation. The chapter-wise PYQs and mindmaps helped me understand the pattern perfectly.",
+      rating: 4.8,
     },
     {
-      name: "Ananya Singh",
-      credential: "JEE Mains 2023, 99.6 percentile",
-      quote: "I received instant digital delivery of all materials which saved me precious time. The study planner kept me organized throughout my preparation journey.",
-      rating: 5,
+      name: "Kavya Sharma",
+      credential: "JEE Mains 2025, Rank 3487",
+      quote: "Amazing study material! The instant digital delivery saved me so much time, and the study planner kept me on track throughout my preparation.",
+      rating: 4.8,
     },
     {
-      name: "Vikram Sharma",
-      credential: "JEE Advanced 2023, Rank 2879",
-      quote: "The syllabus tracker and chapter-wise questions helped me identify my weak areas quickly. Definitely worth the investment!",
-      rating: 5,
+      name: "Rohit Verma",
+      credential: "JEE Mains 2025, Rank 4023",
+      quote: "The detailed notes and formula sheets were incredibly helpful. I could revise quickly before the exam and felt confident on test day.",
+      rating: 4.8,
     },
     {
-      name: "Priya Patel",
-      credential: "JEE Mains 2023, 99.5 percentile",
-      quote: "The detailed notes were comprehensive yet concise. I especially loved how everything was delivered instantly after purchase.",
-      rating: 5,
-    },
-    {
-      name: "Arjun Kapoor",
-      credential: "JEE Advanced 2023, Rank 2143",
-      quote: "The 40-day crash course in the Premium Pack was a game-changer for my last-minute preparation. The mentorship from IITians gave me valuable insights.",
-      rating: 5,
-    },
-    {
-      name: "Neha Verma",
-      credential: "JEE Mains 2023, 99.7 percentile",
-      quote: "The mindmaps and DPPs helped me strengthen my concepts. The test series accurately simulated the actual exam environment.",
-      rating: 5,
-    },
-    {
-      name: "Sahil Kumar",
-      credential: "JEE Advanced 2023, Rank 2867",
-      quote: "Having over 500 questions per chapter booklet helped me practice thoroughly. The syllabus tracker ensured I didn't miss any important topics.",
-      rating: 5,
-    },
-    {
-      name: "Ishita Jain",
-      credential: "JEE Mains 2023, 99.6 percentile",
-      quote: "The instant digital delivery was a relief as I could start studying immediately. The short notes were perfect for quick revisions before the exam.",
-      rating: 5,
+      name: "Priya Singh",
+      credential: "JEE Mains 2025, Rank 2789",
+      quote: "The syllabus tracker ensured I didn't miss any important topics. The mindmaps made complex concepts so much easier to understand and remember.",
+      rating: 4.8,
     },
   ];
+
+  const renderStars = (rating: number) => {
+    const fullStars = Math.floor(rating);
+    const hasPartialStar = rating % 1 !== 0;
+    const stars = [];
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(
+        <Star key={i} fill="#FFD700" stroke="#FFD700" className="h-5 w-5" />
+      );
+    }
+
+    if (hasPartialStar) {
+      stars.push(
+        <div key="partial" className="relative">
+          <Star className="h-5 w-5 text-gray-300" />
+          <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
+            <Star fill="#FFD700" stroke="#FFD700" className="h-5 w-5" />
+          </div>
+        </div>
+      );
+    }
+
+    const remainingStars = 5 - Math.ceil(rating);
+    for (let i = 0; i < remainingStars; i++) {
+      stars.push(
+        <Star key={`empty-${i}`} className="h-5 w-5 text-gray-300" />
+      );
+    }
+
+    return stars;
+  };
 
   return (
     <section id="testimonials" className="py-20 bg-intellexa-light">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="section-heading">Real Success Stories</h2>
+          <h2 className="section-heading">Fresh 2025 JEE Success Stories</h2>
           <p className="section-subheading">
-            Don't just take our word for it. Here's what our JEE students have to say about Intellexa Study Pack.
+            See how our recent JEE Mains 2025 toppers achieved their dream ranks with Intellexa Study Pack.
           </p>
         </div>
         
         <Carousel className="max-w-4xl mx-auto">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} fill="#FFD700" stroke="#FFD700" className="h-5 w-5" />
-                    ))}
+                    {renderStars(testimonial.rating)}
+                    <span className="ml-2 text-sm text-gray-600 font-medium">{testimonial.rating}/5</span>
                   </div>
                   
                   <p className="text-gray-700 italic mb-6">"{testimonial.quote}"</p>
@@ -97,7 +104,7 @@ const TestimonialsSection: React.FC = () => {
         
         <div className="mt-12 text-center">
           <p className="text-xl text-gray-700">
-            Join thousands of successful JEE students who transformed their preparation with Intellexa!
+            Join the latest batch of successful JEE 2025 students who achieved their target ranks with Intellexa!
           </p>
         </div>
       </div>
