@@ -3,7 +3,6 @@ import React from 'react';
 import { Badge, Crown, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import PricingCard from './pricing/PricingCard';
-import SatisfactionGuarantee from './pricing/SatisfactionGuarantee';
 import { 
   basicFeatures, 
   standardFeatures, 
@@ -75,8 +74,6 @@ const PricingSection: React.FC = () => {
             />
           ))}
         </div>
-        
-        <SatisfactionGuarantee />
       </div>
     </section>
   );
